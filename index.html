@@ -5,29 +5,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>
-    .btn-info {
-      background-color: blue;
-      color: white;
-    }
-  </style>
 </head>
 
 <body>
-  <div id="vanilla-js">
-    <button id="button" onclick="changeButtonText('button')">Click me</button>
-  </div>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <div id="root"></div>
 
   <script>
-    const changeButtonText = (elementId) => {
-      const button = document.getElementById(elementId);
-      button.textContent = "Button clicked in Vanilla JS";
-      button.className = 'btn-info';
-    };
+    console.log(React, ReactDOM);
 
-    const headerElement = document.createElement('h1');
-    headerElement.innerHTML = 'Hello from Vanilla JS';
-    document.getElementById('vanilla-js').append(headerElement);
+    const headerElement = React.createElement('h1', null, 'Hello from React');
+    console.log(headerElement);
+
+    const container = document.getElementById('root');
+    const root = ReactDOM.createRoot(container);
+    root.render(headerElement);
+
   </script>
 </body>
 
