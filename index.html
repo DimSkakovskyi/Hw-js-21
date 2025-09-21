@@ -8,24 +8,20 @@
 </head>
 
 <body>
+  <div id="root"></div>
+
+  <style>
+    .btn-info {
+      background-color: blue;
+      color: white;
+    }
+  </style>
+
   <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
   <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-  <div id="root"></div>
-
-  <script type="text/babel">
-    console.log(React, ReactDOM);
-
-    // const headerElement = React.createElement('h1', null, 'Hello from React');
-    const headerElement = <h1>Hello from React</h1>;
-    console.log(headerElement);
-
-    const container = document.getElementById('root');
-    const root = ReactDOM.createRoot(container);
-    root.render(headerElement);
-
-  </script>
+  <script src="assets/js/main.js" type="text/babel"></script>
 </body>
 
 </html>
