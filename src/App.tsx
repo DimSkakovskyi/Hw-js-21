@@ -13,9 +13,9 @@ const App = () => {
 
   return <div>
     <Counter count={count}/>
-    <Button onClick={incrementCount} caption='Increment'/>
-    <Button onClick={decrementCount} caption='Decrement'/>
-    <Button onClick={resetCount} caption='Reset'/>
+    <Button onClick={incrementCount}>Increment</Button>
+    <Button onClick={decrementCount}>Decrement</Button> 
+    {count !== 0 && (<Button onClick={resetCount}>Reset</Button>)}
   </div>;
 }
 
