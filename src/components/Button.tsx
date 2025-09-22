@@ -1,11 +1,13 @@
+import type { ReactNode } from 'react';
+
 interface ButtonProps {
-  caption: string,
+  children: ReactNode;
   onClick: () => void;
 }
 
-const Button = ({ caption, onClick }: ButtonProps) => {
+const Button = ({ children, onClick }: ButtonProps) => {
   return (
-    <button onClick={onClick}>{caption}</button>
+    <button onClick={onClick}>{children}</button>
   );
 };
 
